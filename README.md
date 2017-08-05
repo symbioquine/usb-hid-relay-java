@@ -8,6 +8,31 @@ The following projects were used as a reference for understanding the protocol;
 
 ## Getting started
 
+### Dependency
+
+* Integrate with JitPack; https://jitpack.io/
+* Add dependency;
+
+pom.xml;
+```xml
+<dependencies>
+    <dependency>
+        <groupId>com.github.symbioquine</groupId>
+        <artifactId>usb-hid-relay-java</artifactId>
+        <version>v1.0.0</version>
+    </dependency>
+</dependencies>
+```
+
+build.gradle;
+```
+dependencies {
+    compile 'com.github.symbioquine:usb-hid-relay-java:v1.0.0'
+}
+```
+
+### Simple use
+
 ```Java
 import net.symbioquine.usbhidrelay.UsbHidRelay;
 import static net.symbioquine.usbhidrelay.UsbHidRelaySize.SIXTEEN;
