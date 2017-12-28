@@ -31,7 +31,7 @@ public class EnumeratedUsbHidRelay<T extends Enum<T> & UsbHidRelaySwitchId> {
   private EnumeratedUsbHidRelay(@NonNull UsbHidRelay hidRelay, @NonNull Class<? extends T> clazz) {
     this.hidRelay = hidRelay;
     this.switchIds = unmodifiableList(asList(clazz.getEnumConstants()));
-    this.switchIdsByValue = unmodifiableMap(switchIds.stream().collect(toMap(UsbHidRelaySwitchId::id, identity())));
+    this.switchIdsByValue = unmodifiableMap(switchIds.stream().collect(toMap(switchId -> switchId.id(), identity())));
 
     if (switchIdsByValue.size() > relaySize().asInt()) {
       throw new IllegalArgumentException(

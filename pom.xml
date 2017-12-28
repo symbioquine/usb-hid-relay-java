@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.symbioquine</groupId>
 	<artifactId>usb-hid-relay</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>UsbHidRelay</name>
 	<packaging>jar</packaging>
 
